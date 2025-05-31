@@ -3,7 +3,7 @@ const serviceAccount = require('../../serviceAccountKey.json');
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: 'https://mi-licorera.firebaseio.com' // URL de tu base de datos
+  databaseURL: 'https://mi-licorera-default-rtdb.firebaseio.com'
 });
 
 module.exports = admin;

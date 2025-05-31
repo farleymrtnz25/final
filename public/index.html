@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Trabajadores - Mi Licorera</title>
+    <title>Gestión de Trabajadores e Inventario - Mi Licorera</title>
     <style>
         body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
         .container { margin-bottom: 30px; padding: 20px; border: 1px solid #ddd; border-radius: 5px; }
@@ -20,12 +20,12 @@
     </style>
 </head>
 <body>
-    <h1>Gestión de Trabajadores - Mi Licorera</h1>
+    <h1>Gestión de Trabajadores e Inventario - Mi Licorera</h1>
 
-    <!-- Formulario de Crear Trabajador -->
+    <!-- Formularios y tabla para Trabajadores -->
     <div class="container">
         <h2>Registrar Nuevo Trabajador</h2>
-        <form id="crearForm">
+        <form id="crearTrabajadorForm">
             <div>
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre" required>
@@ -48,13 +48,12 @@
             </div>
             <button type="submit">Registrar</button>
         </form>
-        <div id="crearResult" class="result"></div>
+        <div id="crearTrabajadorResult" class="result"></div>
     </div>
 
-    <!-- Formulario de Actualizar Trabajador -->
-    <div class=".container">
+    <div class="container">
         <h2>Actualizar Trabajador</h2>
-        <form id="actualizarForm">
+        <form id="actualizarTrabajadorForm">
             <div>
                 <label for="updateId">ID del Trabajador:</label>
                 <input type="text" id="updateId" required>
@@ -75,27 +74,25 @@
             </div>
             <button type="submit">Actualizar</button>
         </form>
-        <div id="actualizarResult" class="result"></div>
+        <div id="actualizarTrabajadorResult" class="result"></div>
     </div>
 
-    <!-- Formulario de Eliminar Trabajador -->
     <div class="container">
         <h2>Eliminar Trabajador</h2>
-        <form id="eliminarForm">
+        <form id="eliminarTrabajadorForm">
             <div>
                 <label for="deleteId">ID del Trabajador:</label>
                 <input type="text" id="deleteId" required>
             </div>
             <button type="submit">Eliminar</button>
         </form>
-        <div id="eliminarResult" class="result"></div>
+        <div id="eliminarTrabajadorResult" class="result"></div>
     </div>
 
-    <!-- Listar Trabajadores -->
     <div class="container">
         <h2>Lista de Trabajadores</h2>
-        <button id="listarBtn">Actualizar Lista</button>
-        <div id="listarResult" class="result"></div>
+        <button id="listarTrabajadoresBtn">Actualizar Lista</button>
+        <div id="listarTrabajadoresResult" class="result"></div>
         <table id="trabajadoresTable" style="display: none;">
             <thead>
                 <tr>
@@ -108,6 +105,81 @@
                 </tr>
             </thead>
             <tbody id="trabajadoresBody">
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Formularios y tabla para Inventario -->
+    <div class="container">
+        <h2>Registrar Nuevo Producto</h2>
+        <form id="crearProductoForm">
+            <div>
+                <label for="productoNombre">Nombre del Producto:</label>
+                <input type="text" id="productoNombre" required>
+            </div>
+            <div>
+                <label for="productoCantidad">Cantidad:</label>
+                <input type="number" id="productoCantidad" required>
+            </div>
+            <div>
+                <label for="productoPrecio">Precio:</label>
+                <input type="number" id="productoPrecio" required>
+            </div>
+            <button type="submit">Registrar</button>
+        </form>
+        <div id="crearProductoResult" class="result"></div>
+    </div>
+
+    <div class="container">
+        <h2>Actualizar Producto</h2>
+        <form id="actualizarProductoForm">
+            <div>
+                <label for="productoUpdateId">ID del Producto:</label>
+                <input type="text" id="productoUpdateId" required>
+            </div>
+            <div>
+                <label for="productoUpdateCampo">Campo a Actualizar:</label>
+                <select id="productoUpdateCampo" required>
+                    <option value="nombre">Nombre</option>
+                    <option value="cantidad">Cantidad</option>
+                    <option value="precio">Precio</option>
+                </select>
+            </div>
+            <div>
+                <label for="productoUpdateValor">Nuevo Valor:</label>
+                <input type="text" id="productoUpdateValor" required>
+            </div>
+            <button type="submit">Actualizar</button>
+        </form>
+        <div id="actualizarProductoResult" class="result"></div>
+    </div>
+
+    <div class="container">
+        <h2>Eliminar Producto</h2>
+        <form id="eliminarProductoForm">
+            <div>
+                <label for="productoDeleteId">ID del Producto:</label>
+                <input type="text" id="productoDeleteId" required>
+            </div>
+            <button type="submit">Eliminar</button>
+        </form>
+        <div id="eliminarProductoResult" class="result"></div>
+    </div>
+
+    <div class="container">
+        <h2>Lista de Productos</h2>
+        <button id="listarProductosBtn">Actualizar Lista</button>
+        <div id="listarProductosResult" class="result"></div>
+        <table id="productosTable" style="display: none;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody id="productosBody">
             </tbody>
         </table>
     </div>

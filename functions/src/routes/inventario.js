@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const trabajadoresController = require('../modelo/trabajadores');
+const inventarioController = require('../modelo/inventario');
 
-router.get('/listar', trabajadoresController.listarTrabajadores);
-router.get('/:id', trabajadoresController.obtenerTrabajador);
-router.post('/', trabajadoresController.crearTrabajador);
-router.put('/:id', trabajadoresController.actualizarTrabajador);
-router.delete('/:id', trabajadoresController.eliminarTrabajador);
+router.get('/listar', inventarioController.listarProductos);
+router.get('/:id', inventarioController.obtenerProducto);
+router.post('/', inventarioController.crearProducto);
+router.put('/:id', inventarioController.actualizarProducto);
+router.delete('/:id', inventarioController.eliminarProducto);
 
 module.exports = router;

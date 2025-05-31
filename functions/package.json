@@ -1,10 +1,10 @@
 {
-  "name": "proyecto-licoreria",
+  "name": "gestion-licoreria",
   "version": "1.0.0",
-  "description": "Proyecto para gestión de trabajadores de una licorería",
-  "main": "functions/src/server.js",
+  "description": "API para gestión de trabajadores e inventario de una licorería",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node functions/src/server.js"
+    "start": "node src/index.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
