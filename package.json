@@ -4,7 +4,8 @@
   "description": "API para gestión de trabajadores e inventario de una licorería",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/index.js",
+    "build": "echo 'Build successful'"
   },
   "dependencies": {
     "cors": "^2.8.5",
